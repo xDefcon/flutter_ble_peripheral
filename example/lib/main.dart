@@ -61,7 +61,10 @@ class FlutterBlePeripheralExampleState
     if (await blePeripheral.isAdvertising) {
       await blePeripheral.stop();
     } else {
-      await blePeripheral.start(advertiseData: advertiseData);
+      await blePeripheral.start(
+        advertiseSettings: advertiseSettings,
+        advertiseData: advertiseData
+      );
     }
   }
 
