@@ -1,3 +1,17 @@
+## 1.2.2
+- [Android] Fixed serviceUuid not working. (thanks @Shik1266 !)
+- [Android] Updated compileSdk to 34.
+
+## 1.2.1
+- Fix build errors & crash on Windows
+- Upgrade gradle to 8.1
+
+## 1.2.0
+Improvements:
+- Added support for windows
+- Updated bluetooth permissions system for Android, no need for permission handler anymore.
+- Updated dependencies and several other small improvements.
+
 ## 1.1.1
 Bugs fixed:
 - Fixed an issue which caused the enableBluetooth function to reply twice.
