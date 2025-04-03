@@ -14,8 +14,8 @@ class BleStatusScreen extends StatelessWidget {
         return "Authorize the BlePeripheral example app to use Bluetooth and location";
       case PeripheralState.poweredOff:
         return "Bluetooth is powered off on your device turn it on";
-      // case PeripheralState.unauthorized:
-      //   return "Enable location services";
+    // case PeripheralState.unauthorized:
+    //   return "Enable location services";
       case PeripheralState.idle:
         return "Bluetooth is up and running";
       default:
@@ -25,8 +25,8 @@ class BleStatusScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        body: Center(
-          child: Text(determineText(status)),
-        ),
-      );
+    body: Center(
+      child: Text(determineText(status)),
+    ),
+  );
 }
