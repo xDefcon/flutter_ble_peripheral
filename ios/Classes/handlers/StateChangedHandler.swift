@@ -32,9 +32,12 @@ public class StateChangedHandler: NSObject, FlutterStreamHandler {
     public func onListen(withArguments arguments: Any?,
                          eventSink: @escaping FlutterEventSink) -> FlutterError? {
         self.eventSink = eventSink
+        if let eventSink = self.eventSink {
+            eventSink(state.rawValue)
+        }
         return nil
     }
-    
+
     public func onCancel(withArguments arguments: Any?) -> FlutterError? {
         eventSink = nil
         return nil

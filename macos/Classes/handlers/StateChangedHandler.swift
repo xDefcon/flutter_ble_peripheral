@@ -21,7 +21,7 @@ public class StateChangedHandler: NSObject, FlutterStreamHandler {
         super.init()
         eventChannel.setStreamHandler(self)
     }
-    
+
     func publishPeripheralState(state: PeripheralState) {
         self.state = state
         if let eventSink = self.eventSink {
@@ -32,6 +32,9 @@ public class StateChangedHandler: NSObject, FlutterStreamHandler {
     public func onListen(withArguments arguments: Any?,
                          eventSink: @escaping FlutterEventSink) -> FlutterError? {
         self.eventSink = eventSink
+        if let eventSink = self.eventSink {
+            eventSink(state.rawValue)
+        }
         return nil
     }
     
